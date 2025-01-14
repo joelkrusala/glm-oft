@@ -80,21 +80,19 @@ const config: HardhatUserConfig = {
         },
         polygon: {
             eid: EndpointId.POLYGON_V2_MAINNET,
-            url:
-                process.env.RPC_URL_POLYGON ||
-                `https://polygon-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
+            url: process.env.RPC_URL_POLYGON || `https://rpc.ankr.com/polygon`,
             accounts,
             gasPrice: 100e9,
             timeout: 60000,
         },
         arbitrumOne: {
             eid: EndpointId.ARBITRUM_V2_MAINNET,
-            url: process.env.RPC_URL_ARBITRUM || `https://arb-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
+            url: process.env.RPC_URL_ARBITRUM || `https://rpc.ankr.com/arbitrum`,
             accounts,
         },
         ethereum: {
             eid: EndpointId.ETHEREUM_V2_MAINNET,
-            url: process.env.RPC_URL_ETHEREUM || `https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
+            url: process.env.RPC_URL_ETHEREUM || `https://rpc.ankr.com/eth`,
             accounts,
             oftAdapter: {
                 tokenAddress: process.env.GLM_ADDRESS || '', // Set the token address for the OFT adapter
@@ -104,14 +102,20 @@ const config: HardhatUserConfig = {
         },
         base: {
             eid: EndpointId.BASE_V2_MAINNET,
-            url: process.env.RPC_URL_BASE || `https://base-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
+            url: process.env.RPC_URL_BASE || `https://mainnet.base.org`,
             accounts,
         },
         bsc: {
             eid: EndpointId.BSC_V2_MAINNET,
-            url: process.env.RPC_URL_BSC || `https://bsc-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
+            url: process.env.RPC_URL_BSC || `https://rpc.ankr.com/bsc`,
             accounts,
             gasPrice: 1e9,
+        },
+        celo: {
+            eid: EndpointId.CELO_V2_MAINNET,
+            url: process.env.RPC_URL_CELO || `https://rpc.ankr.com/celo`,
+            accounts,
+            gasPrice: 10e9,
         },
         hardhat: {
             // Need this for testing because TestHelperOz5.sol is exceeding the compiled contract size limit
