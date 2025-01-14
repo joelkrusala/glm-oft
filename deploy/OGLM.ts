@@ -33,6 +33,9 @@ const deploy: DeployFunction = async (hre) => {
     // }
     const endpointV2Deployment = await hre.deployments.get('EndpointV2')
 
+    // Add salt for create2 deployment
+    const salt = hre.ethers.utils.formatBytes32String('OGLM_test') // You can customize this salt
+
     const { address } = await deploy(contractName, {
         from: deployer,
         args: [
@@ -43,6 +46,8 @@ const deploy: DeployFunction = async (hre) => {
         ],
         log: true,
         skipIfAlreadyDeployed: false,
+        // Add create2 deployment options
+        deterministicDeployment: salt,
     })
 
     console.log(`Deployed contract: ${contractName}, network: ${hre.network.name}, address: ${address}`)

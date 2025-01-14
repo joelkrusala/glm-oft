@@ -41,7 +41,32 @@ if (accounts == null) {
 
 const config: HardhatUserConfig = {
     etherscan: {
-        apiKey: process.env.ETHERSCAN_API_KEY,
+        apiKey: {
+            arbitrumOne: process.env.ETHERSCAN_API_KEY || '',
+            base: process.env.ETHERSCAN_API_KEY || '',
+            bsc: process.env.ETHERSCAN_API_KEY || '',
+            celo: process.env.CELOSCAN_API_KEY || '',
+            ethereum: process.env.ETHERSCAN_API_KEY || '',
+            polygon: process.env.POLYGONSCAN_API_KEY || '',
+        },
+        customChains: [
+            {
+                network: 'celo',
+                chainId: 42220,
+                urls: {
+                    apiURL: 'https://api.celoscan.io/api',
+                    browserURL: 'https://celoscan.io/',
+                },
+            },
+            {
+                network: 'polygon',
+                chainId: 137,
+                urls: {
+                    apiURL: 'https://api.polygonscan.com/api',
+                    browserURL: 'https://polygonscan.com/',
+                },
+            },
+        ],
     },
     paths: {
         cache: 'cache/hardhat',

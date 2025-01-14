@@ -177,7 +177,7 @@ export default {
                 },
                 receiveConfig: {
                     ulnConfig: {
-                        confirmations: 512,
+                        confirmations: 50,
                         requiredDVNs: [
                             '0x2f55C492897526677C5B68fb199ea31E2c126416',
                             '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
@@ -332,7 +332,7 @@ export default {
                 },
                 receiveConfig: {
                     ulnConfig: {
-                        confirmations: 512,
+                        confirmations: 50,
                         requiredDVNs: [
                             '0x9e059a54699a285714207b43B055483E78FAac25',
                             '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
@@ -487,7 +487,7 @@ export default {
                 },
                 receiveConfig: {
                     ulnConfig: {
-                        confirmations: 512,
+                        confirmations: 50,
                         requiredDVNs: [
                             '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
                             '0xfD6865c841c2d64565562fCc7e05e619A30615f0',
@@ -642,7 +642,7 @@ export default {
                 },
                 receiveConfig: {
                     ulnConfig: {
-                        confirmations: 512,
+                        confirmations: 50,
                         requiredDVNs: [
                             '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
                             '0x75b073994560a5c03cd970414d9170be0c6e5c36',
@@ -797,7 +797,7 @@ export default {
                 },
                 receiveConfig: {
                     ulnConfig: {
-                        confirmations: 512,
+                        confirmations: 50,
                         requiredDVNs: [
                             '0x589dEDbD617e0CBcB916A9223F4d1300c294236b',
                             '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
@@ -817,7 +817,7 @@ export default {
                 sendConfig: {
                     executorConfig: { maxMessageSize: 10000, executor: '0xCd3F213AD101472e1713C72B1697E727C803885b' },
                     ulnConfig: {
-                        confirmations: 512,
+                        confirmations: 50,
                         requiredDVNs: [
                             '0x23DE2FE932d9043291f870324B74F820e11dc81A',
                             '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
@@ -848,7 +848,7 @@ export default {
                 sendConfig: {
                     executorConfig: { maxMessageSize: 10000, executor: '0xCd3F213AD101472e1713C72B1697E727C803885b' },
                     ulnConfig: {
-                        confirmations: 512,
+                        confirmations: 50,
                         requiredDVNs: [
                             '0x23DE2FE932d9043291f870324B74F820e11dc81A',
                             '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
@@ -879,7 +879,7 @@ export default {
                 sendConfig: {
                     executorConfig: { maxMessageSize: 10000, executor: '0xCd3F213AD101472e1713C72B1697E727C803885b' },
                     ulnConfig: {
-                        confirmations: 512,
+                        confirmations: 50,
                         requiredDVNs: [
                             '0x23DE2FE932d9043291f870324B74F820e11dc81A',
                             '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
@@ -910,7 +910,7 @@ export default {
                 sendConfig: {
                     executorConfig: { maxMessageSize: 10000, executor: '0xCd3F213AD101472e1713C72B1697E727C803885b' },
                     ulnConfig: {
-                        confirmations: 512,
+                        confirmations: 50,
                         requiredDVNs: [
                             '0x23DE2FE932d9043291f870324B74F820e11dc81A',
                             '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
@@ -941,7 +941,7 @@ export default {
                 sendConfig: {
                     executorConfig: { maxMessageSize: 10000, executor: '0xCd3F213AD101472e1713C72B1697E727C803885b' },
                     ulnConfig: {
-                        confirmations: 512,
+                        confirmations: 50,
                         requiredDVNs: [
                             '0x23DE2FE932d9043291f870324B74F820e11dc81A',
                             '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
