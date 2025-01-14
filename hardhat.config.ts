@@ -14,9 +14,9 @@ import { HardhatUserConfig, HttpNetworkAccountsUserConfig } from 'hardhat/types'
 import { EndpointId } from '@layerzerolabs/lz-definitions'
 
 import './type-extensions'
-// import './tasks'
+import './tasks'
 import '@nomicfoundation/hardhat-verify'
-// import './tasks/sendOFT'
+import './tasks/sendOFT'
 
 // Set your preferred authentication method
 //
@@ -82,36 +82,34 @@ const config: HardhatUserConfig = {
             eid: EndpointId.POLYGON_V2_MAINNET,
             url:
                 process.env.RPC_URL_POLYGON ||
-                'https://polygon-mainnet.g.alchemy.com/v2/VtijamuHgl8L4DwmjVFQHOz-OnC7PhNi',
+                `https://polygon-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
             accounts,
             gasPrice: 100e9,
             timeout: 60000,
         },
         arbitrumOne: {
             eid: EndpointId.ARBITRUM_V2_MAINNET,
-            url:
-                process.env.RPC_URL_ARBITRUM || 'https://arb-mainnet.g.alchemy.com/v2/VtijamuHgl8L4DwmjVFQHOz-OnC7PhNi',
+            url: process.env.RPC_URL_ARBITRUM || `https://arb-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
             accounts,
         },
         ethereum: {
             eid: EndpointId.ETHEREUM_V2_MAINNET,
-            url:
-                process.env.RPC_URL_ETHEREUM || 'https://eth-mainnet.g.alchemy.com/v2/VtijamuHgl8L4DwmjVFQHOz-OnC7PhNi',
+            url: process.env.RPC_URL_ETHEREUM || `https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
             accounts,
             oftAdapter: {
-                tokenAddress: '0x0B3EAEAd748facDb9d943d3407011f16Eb17D0Cf', // Set the token address for the OFT adapter
+                tokenAddress: process.env.GLM_ADDRESS || '', // Set the token address for the OFT adapter
             },
             gasPrice: 15.3e9,
             timeout: 600000,
         },
         base: {
             eid: EndpointId.BASE_V2_MAINNET,
-            url: process.env.RPC_URL_BASE || 'https://base-mainnet.g.alchemy.com/v2/VtijamuHgl8L4DwmjVFQHOz-OnC7PhNi',
+            url: process.env.RPC_URL_BASE || `https://base-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
             accounts,
         },
         bsc: {
             eid: EndpointId.BSC_V2_MAINNET,
-            url: process.env.RPC_URL_BASE || 'https://bnb-mainnet.g.alchemy.com/v2/VtijamuHgl8L4DwmjVFQHOz-OnC7PhNi',
+            url: process.env.RPC_URL_BSC || `https://bsc-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
             accounts,
             gasPrice: 1e9,
         },

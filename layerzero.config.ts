@@ -1,23 +1,23 @@
 import { EndpointId } from '@layerzerolabs/lz-definitions'
 const arbitrumOneContract = {
     eid: EndpointId.ARBITRUM_V2_MAINNET,
-    contractName: 'PrimexOFT',
+    contractName: 'OGLM',
 }
 const baseContract = {
     eid: EndpointId.BASE_V2_MAINNET,
-    contractName: 'PrimexOFT',
+    contractName: 'OGLM',
 }
 const bscContract = {
     eid: EndpointId.BSC_V2_MAINNET,
-    contractName: 'PrimexOFT',
+    contractName: 'OGLM',
 }
 const ethereumContract = {
     eid: EndpointId.ETHEREUM_V2_MAINNET,
-    contractName: 'PrimexOFTAdapter',
+    contractName: 'GLMAdapter',
 }
 const polygonContract = {
     eid: EndpointId.POLYGON_V2_MAINNET,
-    contractName: 'PrimexOFT',
+    contractName: 'OGLM',
 }
 export default {
     contracts: [
